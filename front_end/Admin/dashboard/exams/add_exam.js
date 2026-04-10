@@ -30,3 +30,48 @@ window.addEventListener('load',async(e)=>{
     
         }
 })
+
+// add exam and send it to server 
+const form = document.querySelector('form')
+let i = 0;
+
+form.addEventListener('submit', async(e)=>{
+    e.preventDefault();
+    i++;
+
+    const exam_name = form.exam_name.value ;
+    const sub_id = form.sub_id.value ;
+    const q_num = form.q_num.value ;
+    const exam_path = form.exam_path.value ; /* check path travirsal */
+    var time = form.time.value ; 
+    time = parseInt(time);
+    q_num = parseInt(q_num);
+    
+    try {
+        const result = await fetch('/admin/dashboard/exams',{
+            method:'Post',
+            body : JSON.stringify({
+                docName : exam_name ,
+                sub_id : sub_id,
+                q_num : q_num ,
+                exam_path : exam_path ,
+                time : time 
+
+            }),
+            headers : {'Content-type':'application/json'}
+        })
+
+        const message = await result.json();
+        form.insertAdjacentHTML('beforeend',`<h2 id="message${i}" style="font-size:14px font-weight:100;">${message.message}</h2>`);
+        const htmlMessage = document.getElementById(`message${i}`)
+        setTimeout(()=>{
+            htmlMessage.remove()
+        },3000)
+        
+    } catch (error) {
+
+        console.log(error);
+
+    }
+
+})

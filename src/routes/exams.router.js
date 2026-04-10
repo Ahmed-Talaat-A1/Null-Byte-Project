@@ -7,4 +7,6 @@ import Router from "express";
 
 const router = Router ();
 
-router.post('/admin/dashboard/subject',auth,adminCheck,examsController.createExams)
+router.post('/admin/dashboard/exams',auth,adminCheck,examsController.createExams)
+
+export default router

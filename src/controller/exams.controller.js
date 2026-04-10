@@ -2,13 +2,14 @@ import mysqlConnection from "../configs/db.js";
 
 const createExams = (req,res,next)=>{
     try {
-        const {examName,subjectId,time,questionsNum} = req.body;
+        const {exam_name,sub_id,time,q_num,exam_path} = req.body;
 
         let exam = {
-            examName:examName,
-            subjectId:subjectId,
+            examName:exam_name,
+            subjectId:sub_id,
             time:time,
-            questionsNum:questionsNum
+            questionsNum:q_num,
+            examPath : exam_path
         }
         
         for(let i in exam){
@@ -25,6 +26,8 @@ const createExams = (req,res,next)=>{
                 }
             }
             else{
+                console.log('try xss');
+                
                 return res.status(400).json({status:'Error',message:'invalid data'})
             }
         }

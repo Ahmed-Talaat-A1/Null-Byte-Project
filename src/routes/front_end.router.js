@@ -24,6 +24,10 @@ router.get('/favicon.ico',(req,res,next)=>{
     const page = fs.readFileSync('./front_end/HackerOne.png')
     return res.send(page)
 })
+router.get('/BG.png',(req,res,next)=>{
+    const page = fs.readFileSync('./front_end/BG.png')
+    return res.send(page)
+})
 
 router.get('/main.css',(req,res,next)=>{
     res.setHeader('content-type','text/css')

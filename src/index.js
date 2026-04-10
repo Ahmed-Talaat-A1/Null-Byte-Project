@@ -8,6 +8,7 @@ import adminRouter from "./routes/admin.router.js"
 import docRouter from "./routes/docs.router.js";
 import subjectRouter from "./routes/subjects.router.js"
 import express from "express";
+import examRouter from "./routes/exams.router.js"
 import cookieParser from "cookie-parser";
 import 'dotenv/config';
 
@@ -33,6 +34,7 @@ app.use(userRouter)
 app.use(adminRouter)
 app.use(docRouter)
 app.use(subjectRouter)
+app.use(examRouter)
 
 app.all("{/*dummy}",(req,res,next)=>{
     res.status(404);
