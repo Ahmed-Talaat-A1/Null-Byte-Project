@@ -1,0 +1,387 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+::selection{
+    color: rgb(61, 73, 164);
+    background-color: rgb(135, 152, 222);
+    
+}
+html{
+    
+    background-color:rgba(255, 228, 196, 0.175)
+    
+}
+nav{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    a{
+        img#ico1{
+            
+            border-radius: 10px;
+            padding: 5px;
+            width: 30px;
+        }
+        margin-left: 10px;
+    };
+    
+    border: 2px;
+    border-style:groove;
+    border-color: rgba(110, 108, 108, 0.393);
+    div.account{
+        
+        position:inherit;/*استخدم دي مع اتجاه لازم هنا مثلا right*/
+        right: 45px;/*نبع اللي فوقيها*/
+        top: 17px;
+        font-family: monospace;
+        width:fit-content;
+        a{
+            font-weight:bold;
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            
+            padding: 10px;
+            
+        }
+        
+    }
+}
+
+.proj{
+    margin-top: 100px;
+}
+.title{/*استخدم . class*/
+    position: inherit;
+    color: black;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    margin: 40px;/*مسافة خارجية*/ 
+    margin-bottom: 30px;
+    
+}
+.title:hover{
+    color: cornflowerblue;
+}
+#user_info{
+    
+    position: relative; 
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(250, 235, 215, 0.147);
+    text-align: center;
+    min-width: 600px;
+    max-width: fit-content;
+   
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    padding:10px;
+    box-shadow:2px 4px 10px 4px rgba(48, 76, 78, 0.148);
+    min-height: 500px;
+    max-height: fit-content;
+}
+#title_name{
+    
+    position:relative;
+    margin-top: 80px;
+    left: 20px;
+    min-width: 200px;
+    max-width: fit-content;    
+    border: 2px;
+    
+}
+#title_username{
+    position:relative;
+    margin-top: 30px;
+    left: 20px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+}
+#title_email{
+    position:relative;
+    margin-top: 30px;
+    left: 20px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+}
+#title_level{
+    position:relative;
+    margin-top: 30px;
+    left: 20px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+}
+#title_role{
+    position:relative;
+    margin-top: 30px;
+    left: 20px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+}
+#title_signup_date{
+    position:relative;
+    margin-top: 30px;
+    left: 20px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+}
+#name{
+    
+    
+    position:absolute;
+    top: 100px;
+    margin-top: 20px;
+    
+    left: 280px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+    border: 2px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+#username{
+    position:absolute;
+    top: 150px;
+    margin-top: 20px;
+    
+    left: 280px;
+    min-width: 200px;
+    max-width: fit-content;
+    border: 2px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+#user_email{
+    position:absolute;
+    top: 200px;
+    margin-top: 20px;
+    
+    left: 280px;
+    min-width: 200px;
+    max-width: fit-content;
+    
+    border: 2px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+#level{
+    position:absolute;
+    top: 250px;
+    margin-top: 20px;
+    
+    left: 280px;
+    min-width: 200px;
+    max-width: fit-content;
+    border: 2px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+#role{
+    position:absolute;
+    top: 300px;
+    margin-top: 20px;
+    
+    left: 280px;
+    min-width: 200px;
+    max-width: fit-content;
+    border: 2px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+#signup_date{
+    position:absolute;
+    top: 350px;
+    margin-top: 20px;
+    
+    left: 280px;
+    min-width: 200px;
+    max-width: fit-content;
+    border: 2px;
+    border-style: groove;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+form{
+    
+    align-items: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(250, 235, 215, 0.147);
+    text-align: center;
+    
+    width: 500px;
+   
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow:2px 4px 10px 4px rgba(48, 76, 78, 0.148);
+    min-height: 500px;
+}
+input[type="full_name"]{
+    margin-top: 50px;
+    width: 250px;
+    height: 25px;
+    font-weight:lighter;
+
+}
+input[type="username"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+    font-weight:lighter;
+
+}
+input[type="password"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+}
+#passcheck{
+    display: flex;
+    margin-top: 7px;
+    margin-right: 40px;
+    /*font-family:Arial, Helvetica, sans-serif;*/
+    font-size: 14px;
+
+    padding-left: 125px; 
+}
+#pcheckbox{
+    accent-color:rgb(17, 224, 124);
+    
+    margin-left: 10px;
+    
+}
+input[type="text"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+}
+input[type="email"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+}
+input[list="level"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+}
+input[type="role"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+    font-weight:lighter;
+
+}
+.Remember{
+    margin-top: 20px;
+}
+input[type="doc_name"]{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 25px;
+    font-weight:lighter;
+
+}
+input[type="sub_name"]{
+    margin-top: 50px;
+   
+    width: 250px;
+    height: 25px;
+    font-weight:lighter;
+
+}
+input[list="doc_id"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+   
+   
+
+}
+input[type="submit"]{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    /* color: rgb(73, 68, 68); */
+    color: rgb(247, 247, 247);
+    /* background-color: turquoise; */
+    background-color: sandybrown;
+    margin-top: 20px;
+    margin-bottom: 17px;
+    width: 100px;
+    height: 35px;
+    border-width: 0px;
+    border-style: outset;
+    /* border-radius: 5px; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 2px rgba(155, 187, 184, 0.347);
+}
+a.login_page{
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    margin-bottom: 100px;
+    margin-top: 500px;
+    padding-bottom: 20px;
+}
+a.login_page:hover{
+    
+    font-weight: bold;
+    color: black;
+}
+.dashboard-div{
+    .box-title{
+        font-size: 23px;
+        text-align: center;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+    position: relative;
+    display:inline-block;
+    box-shadow:2px 4px 10px 4px rgba(48, 76, 78, 0.148);
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    padding: 10px;
+    border: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: groove;
+    width: 400px;
+    height: 400px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: larger;
+
+    font-weight: bold;
+    justify-content: space-between;/*يفصلك العناصر عن بعض*/
+    padding: 8px;/*مسافة داخلية*/
+    a{
+        color: black;
+        text-decoration: none;/*ازالة الخط من تحت اللينك*/
+    }
+    a#footer_contact_me{
+        position:absolute;/*استخدم دي مع اتجاه لازم هنا مثلا right*/
+        right: 45px;
+    }
+    a:hover{
+        color: rgba(87, 124, 188, 0.726);
+    }
+    
+}

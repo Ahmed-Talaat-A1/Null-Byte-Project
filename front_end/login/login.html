@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head><!-- This is a comment -->
+        <meta charset="utf.8"/><!-- عشان تعرف اللغات اللي الموق هيشتغل بيها  -->
+        <meta name="descripthion" content="دة وصف الموقع علي محركات البحث "/>
+        <title>Login Page</title><!-- دة الاسم اللي بيبقي ظاهر من فوق  -->
+
+        <link rel="stylesheet" href="/main.css"/><!-- عشان تربط css -->
+        
+    </head>
+    <body>
+        <nav>
+            <a href="/"><img src="/favicon.ico" alt="" width="100" id="ico1"></a>
+            <div class="account">
+                <a href="/signup" id="reg">signup</a>
+            </div>
+        </nav>
+        <form id="myForm" >
+            <div class="title"><h2>Login</h2></div>
+
+            <input id="email" type="text" placeholder=" email or username" required name="email" autofocus><br>
+            <input id="password" type="password"placeholder=" password" required name="password" minlength="8" maxlength="20">
+            <div class="Remember">
+                <label for="Remeber">Remeber me</label>
+                <input type="checkbox" id="Remeber"><br>
+            </div>
+            
+            <input type="submit" value="Login"><br>
+            <a href="/signup" class="login_page">Register</a><br>
+        </form>
+
+        <footer>
+            <a href="https://linktr.ee/Ahmed_Talaat_A1" target="_blank" >Social media links</a>
+            <a id="footer_contact_me" href="mailto:titahmed2006www@gmail.com">Contact me</a>
+        </footer>
+        <script src="login.js"></script>
+        
+    </body>
+</html>

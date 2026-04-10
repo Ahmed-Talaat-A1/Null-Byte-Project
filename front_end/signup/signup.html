@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head><!-- This is a comment -->
+        <meta charset="utf.8"/><!-- عشان تعرف اللغات اللي الموق هيشتغل بيها  -->
+        <meta name="descripthion" content="دة وصف الموقع علي محركات البحث "/>
+        <title>singup</title><!-- دة الاسم اللي بيبقي ظاهر من فوق  -->
+
+        <link rel="stylesheet" href="main.css"/><!-- عشان تربط css -->
+        
+    </head>
+    <body>
+        <nav>
+            <a href="/" ><img src="/favicon.ico" alt="your browser not suport image" width="100" id="ico1"></a>
+            <div class="account" >
+                <a href="/login" id="log">Login</a>
+            </div>
+        </nav>
+        <form method="post">
+            <div class="title"><h2>Registr</h2></div>
+            <input type="full_name" required placeholder=" your name" name="full_name" autofocus><br>
+            <input type="username" placeholder=" username" required name="username"><br>
+            <input type="email" placeholder=" email" required name="email"><br>
+            <input type="password" placeholder=" password" required name="password" minlength="8" maxlength="20" id="password"><br>
+            <div id="passcheck"><br></div>
+            
+            <input list="level" name="level" placeholder=" your level">
+            <datalist id="level">
+                <option value=1>
+                <option value=2>
+                <option value=3></option>
+                <option value=4></option>
+            </datalist><br>
+            <input type="submit" value="Registr" id="registr"><br>
+            <a href="/login" class="login_page">Login</a>
+            
+        </form>
+        
+        <footer>
+            <a href="https://linktr.ee/Ahmed_Talaat_A1" target="_blank" class="Social">Social media links</a>
+            <a id="footer_contact_me" href="mailto:titahmed2006www@gmail.com">Contact me</a>
+        </footer>
+        <script src="signup.js"></script>
+    </body>
+</html>
