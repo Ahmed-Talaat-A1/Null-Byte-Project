@@ -19,19 +19,20 @@
                 
             </div>
         </nav>
-
+   
         <form method="post">
             <div class="title"><h2>Add New Exam</h2></div>
             <input type="text" required placeholder=" exam_name" name="exam_name" autofocus><br>
             
             
-            <input  list="level" name="level" placeholder="level">
-            <datalist id="level">
-                <option value=1>
-                <option value=2>
-                <option value=3></option>
-                <option value=4></option>
-            </datalist><br>
+            <select id="subjects" class="select" name="sub_id">
+            </select>
+            
+
+            <input type="text" required placeholder=" exam_path" name="exam_path" autofocus><br>
+            <input type="number" required placeholder=" time" name="time" autofocus><br>
+            <input type="number" required placeholder=" number of question" name="q_num" autofocus><br>
+
 
             <input type="submit" value="Add" id="registr"><br>
             

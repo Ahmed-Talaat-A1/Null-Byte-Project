@@ -28,9 +28,9 @@ window.addEventListener('load',async(e)=>{
             })
             const docs_data = await docs.json();
             
-            const doc_list = document.getElementById('doc_id')
-
-            for (let i of docs_data.data){
+            const doc_list = document.getElementById('doctors')
+            
+            for (let i of docs_data.doctors){
                 
                 const optionChild = document.createElement('option')
                 optionChild.innerText = i.doc_name;

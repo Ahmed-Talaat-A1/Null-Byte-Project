@@ -3,7 +3,7 @@ let d = document.createElement("div");
 d.className = "proj";
 document.body.appendChild(d);
 let h3 = document.createElement("h3");
-let h33 = document.createTextNode(` users :-`);
+let h33 = document.createTextNode(` Doctors :-`);
 h3.appendChild(h33);
 d.appendChild(h3);
 h3.style.cssText = "  font-size: 24px; margin-left:0px; font-weight:bolder; font-family:monospace;";

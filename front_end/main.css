@@ -229,6 +229,13 @@ form{
     box-shadow:2px 4px 10px 4px rgba(48, 76, 78, 0.148);
     min-height: 500px;
 }
+input[type="number"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+    font-weight:lighter;
+
+}
 input[type="full_name"]{
     margin-top: 50px;
     width: 250px;
@@ -264,6 +271,11 @@ input[type="password"]{
     
 }
 input[type="text"]{
+    margin-top: 20px;
+    width: 250px;
+    height: 25px;
+}
+.select{
     margin-top: 20px;
     width: 250px;
     height: 25px;
@@ -304,7 +316,7 @@ input[type="sub_name"]{
     font-weight:lighter;
 
 }
-input[list="doc_id"]{
+.list{
     margin-top: 20px;
     width: 250px;
     height: 25px;

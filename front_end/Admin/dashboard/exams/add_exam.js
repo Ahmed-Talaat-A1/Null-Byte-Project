@@ -20,6 +20,22 @@ window.addEventListener('load',async(e)=>{
                 document.getElementById('div_account').insertAdjacentHTML('afterbegin',`<a href="/admin/dashboard/" > ${user_data.user[0].role}</a>`);
 
             }
+
+            const docs = await fetch('/admin/dashboard/subject',{
+            method : 'GET'
+            })
+            const subs_data = await docs.json();
+            console.log(subs_data);
+            
+            const sub_list = document.getElementById('subjects')
+
+            for (let i of subs_data.subjects){
+                
+                var optionChild = document.createElement('option')
+                optionChild.innerText = i.sub_name;
+                optionChild.value = i.sub_id
+                const option = sub_list.append(optionChild)
+            }
             
         } catch (error) {
             const after_login_my_profile = document.getElementById('after_login_my_profile')
@@ -41,7 +57,7 @@ form.addEventListener('submit', async(e)=>{
 
     const exam_name = form.exam_name.value ;
     const sub_id = form.sub_id.value ;
-    const q_num = form.q_num.value ;
+    var q_num = form.q_num.value ;
     const exam_path = form.exam_path.value ; /* check path travirsal */
     var time = form.time.value ; 
     time = parseInt(time);
@@ -51,7 +67,7 @@ form.addEventListener('submit', async(e)=>{
         const result = await fetch('/admin/dashboard/exams',{
             method:'Post',
             body : JSON.stringify({
-                docName : exam_name ,
+                exam_name : exam_name ,
                 sub_id : sub_id,
                 q_num : q_num ,
                 exam_path : exam_path ,
@@ -59,7 +75,12 @@ form.addEventListener('submit', async(e)=>{
 
             }),
             headers : {'Content-type':'application/json'}
+
+            
+
         })
+
+        
 
         const message = await result.json();
         form.insertAdjacentHTML('beforeend',`<h2 id="message${i}" style="font-size:14px font-weight:100;">${message.message}</h2>`);
