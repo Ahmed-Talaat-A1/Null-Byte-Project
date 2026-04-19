@@ -5,6 +5,7 @@ import validator from 'validator';
 
 
 const signup = (req,res,next)=> {
+    
     const role = 'User';
     
     try {
@@ -88,7 +89,7 @@ const signup = (req,res,next)=> {
             // hashing password and stor user info
             bcrypt.hash(password,10,(error,hash)=>{
                 
-                mysqlConnection.execute(`INSERT INTO users VALUES(NULL,?,?,?,?,?,NULL,?)`,[full_name,username,role,email,hash,level] , (error)=>{
+                mysqlConnection.execute(`INSERT INTO users (full_name, username, role, email, password, level_id) VALUES(?,?,?,?,?,?)`,[full_name,username,role,email,hash,level] , (error)=>{
                     if (error){
                         console.log(error);
                         

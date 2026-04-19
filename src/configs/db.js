@@ -12,7 +12,8 @@ mysqlConnection.connect((error)=>{
     if (error){
         console.log("fail to connect DB");
         
-    }else{
+    }
+    else{
         console.log('DB success');
         
     }

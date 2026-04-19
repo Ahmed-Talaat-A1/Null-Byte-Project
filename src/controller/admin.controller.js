@@ -100,7 +100,7 @@ const createNewUser = (role,req,res,next)=> {
             // hashing password and stor user info
             bcrypt.hash(password,10,(error,hash)=>{
                 
-                mysqlConnection.execute(`INSERT INTO users VALUES(NULL,?,?,?,?,?,NULL,?)`,[full_name,username,role,email,hash,level] , (error)=>{
+                mysqlConnection.execute(`INSERT INTO users (full_name, username, role, email, password, level_id) VALUES(?,?,?,?,?,?)`,[full_name,username,role,email,hash,level] , (error)=>{
                     if (error){
                         console.log(error);
                         
@@ -119,6 +119,7 @@ const createNewUser = (role,req,res,next)=> {
         return res.status(400).json({Error:'invalid request'})
     }
 }
+
 const addUser = (req,res,next)=>{
     try {
         const {role} = req.body ;
@@ -184,6 +185,7 @@ const editeUser = (req,res,next)=>{
     }
     
 }
+
 const editeUserLogic = async (user_id,editorRole,req,res,next)=>{
     try {
 
@@ -371,6 +373,18 @@ const deleteUser = (req,res,next)=>{
     }
     
 }
-// user count
+// dashbaord
 
-export default {editeUser,getUser,addUser,getAllUsers,deleteUser}
+const dashbaord = (req,res,next)=>{
+    
+    const examscount = 0 ;
+    const docscount = 0 ;
+    const subsscount = 0 ;
+
+    mysqlConnection.execute(`SELECT count(users.user_id) FROM users `,(error,data)=>{
+        const usersCount = data[0] ;
+        return res.status(200).json({status:'success'})
+    })
+}
+
+export default {editeUser,getUser,addUser,getAllUsers,deleteUser,dashbaord}
